@@ -1,12 +1,13 @@
 package routers
 
-import(
+import (
 	"github.com/gin-gonic/gin"
 
-	"gin-blog/pkg/setting"
-	"gin-blog/routers/api/v1"
-	"gin-blog/routers/api"
 	"gin-blog/middleware/jwt"
+	"gin-blog/pkg/setting"
+	"gin-blog/routers/api"
+	v1 "gin-blog/routers/api/v1"
+	"gin-blog/routers/dict_query"
 )
 
 func InitRouter() *gin.Engine {
@@ -42,6 +43,7 @@ func InitRouter() *gin.Engine {
 		//删除指定文章
 		apiv1.DELETE("/aritcles/:id", v1.DeleteArticle)
 	}
+	dict_query.InitRouter(r)
 
 	return r
 }
