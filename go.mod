@@ -8,6 +8,8 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gin-gonic/gin v1.4.0
 	github.com/go-ini/ini v1.49.0
+	github.com/golang/protobuf v1.3.2
 	github.com/jinzhu/gorm v1.9.11
 	github.com/unknwon/com v1.0.1
+	google.golang.org/grpc v1.19.0
 )

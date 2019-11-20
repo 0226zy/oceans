@@ -1,0 +1,16 @@
+syntax="proto3";
+
+package hello_world;
+//option go_package="gin-blog/protocol/service/hello-world";
+
+service HelloWorld{
+  rpc Hi(HelloReq) returns(HelloResp){}
+}
+
+message HelloReq{
+  string name = 1;
+}
+
+message HelloResp{
+  string msg = 2;
+}
